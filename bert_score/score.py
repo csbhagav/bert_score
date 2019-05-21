@@ -28,7 +28,6 @@ def score(cands, refs, bert="bert-base-multilingual-cased",
         - :param: `batch_size` (int): bert score processing batch size
     """
     assert len(cands) == len(refs)
-    assert bert in bert_types
 
     tokenizer = BertTokenizer.from_pretrained(bert)
     model = BertModel.from_pretrained(bert)
